@@ -31,7 +31,7 @@ This Laravel application aggregates and serves articles from multiple news APIs 
 
 ```bash
 # 1. Clone this repo
-git clone https://github.com/YOUR_GITHUB_USERNAME/news-aggregator.git
+git clone https://github.com/qistuna456/news-aggregator.git
 cd news-aggregator
 
 # 2. Install dependencies
