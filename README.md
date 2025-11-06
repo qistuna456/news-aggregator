@@ -64,32 +64,47 @@ php artisan migrate --seed
 
 # 7. (Optional) Fetch articles
 php artisan fetch:articles
+```
 
+---
 
-📡 API Endpoints
-Endpoint	Method	Description
-/api/v1/articles	GET	List all articles (with pagination)
-/api/v1/articles?q=tech	GET	Search articles by keyword
-/api/v1/articles?source=newsapi	GET	Filter by source
-/api/v1/articles/{id}	GET	View single article
-/api/v1/sources	GET	List all news sources
-🧠 Commands
+## 📡 **API Endpoints**
+
+| Endpoint | Method | Description |
+|-----------|---------|-------------|
+| `/api/v1/articles` | GET | List all articles (with pagination) |
+| `/api/v1/articles?q=tech` | GET | Search articles by keyword |
+| `/api/v1/articles?source=newsapi` | GET | Filter by source |
+| `/api/v1/articles/{id}` | GET | View single article |
+| `/api/v1/sources` | GET | List all news sources |
+
+---
+
+## 🧠 **Commands**
 # Fetch from all sources
+```bash
 php artisan fetch:articles
+```
 
 # Fetch only Guardian
+```bash
 php artisan fetch:articles guardian
+```
 
 # Fetch only NYT
+```bash
 php artisan fetch:articles nytimes
+```
+---
 
-⏰ Scheduler (Optional)
-
+## ⏰ Scheduler (Optional)
 To fetch articles automatically every 30 minutes:
 
 php artisan schedule:work
 
-🧩 Folder Structure
+---
+
+## 🧩 Folder Structure**
 app/
  ├── Console/
  │    └── Commands/
@@ -104,10 +119,12 @@ app/
 routes/
  └── api.php
 
-🧪 Testing the API (PowerShell)
+---
+## 🧪 Testing the API (PowerShell)
 Invoke-RestMethod -Uri "http://news-aggregator.test/api/v1/articles" -Method GET | ConvertTo-Json -Depth 5
 
-🧭 Future Improvements
+---
+## 🧭 Future Improvements
 
 Caching with Redis
 
@@ -119,7 +136,8 @@ API rate limiting
 
 Swagger/OpenAPI documentation
 
-👤 Author
+---
 
+## 👤 Author
 Qistuna ‘Ilmi Yusof
 Backend Developer • Laravel • PHP • REST APIs
